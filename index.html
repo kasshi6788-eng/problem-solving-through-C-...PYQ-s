@@ -1,0 +1,4185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C Programmingss</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>C Programming Practice Question Paper</h1>
+<p>BCA Semester 1 Study Portal</p>
+</header>
+<div class="container">
+<nav class="sidebar">
+<h3>Syllabus Units</h3>
+<div class="topic-menu">
+<button class="topic-btn" onclick="filterTopic('basic-io', this)">Basic Input Output</button>
+<button class="topic-btn" onclick="filterTopic('operators', this)">Operators</button>
+<button class="topic-btn" onclick="filterTopic('decision', this)">Decision Control Structure</button>
+<button class="topic-btn" onclick="filterTopic('loops', this)">Iterative Control Structure (Loops)</button>
+<button class="topic-btn" onclick="filterTopic('nested-loops', this)">Iterative Control Structure (Nested Loops)</button>
+<button class="topic-btn" onclick="filterTopic('single-arrays', this)">Single Dimension Arrays</button>
+<button class="topic-btn" onclick="filterTopic('multi-arrays', this)">Multi-Dimension Arrays</button>
+<button class="topic-btn" onclick="filterTopic('strings', this)">Strings</button>
+<button class="topic-btn" onclick="filterTopic('functions', this)">Functions</button>
+<button class="topic-btn" onclick="filterTopic('structures', this)">structures</button>
+<button class="topic-btn" onclick="filterTopic('pointers', this)">Pointers</button>
+<button class="topic-btn" onclick="filterTopic('file-handling', this)">File Handling</button>
+<button class="topic-btn" onclick="filterTopic('Recursion', this)">Recursion</button>
+
+</div>
+</nav>
+<main class="content">
+<div class="question-card" data-topic="basic-io">
+<span class="badge">Basic IO - Q1</span>
+<h4>Write a program to print the message: "Today I made my first C Program."</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This program demonstrates basic text printing functionality using the standard <code>printf()</code> output function execution configuration.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+clrscr();
+printf("Today I made my first C Program.\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Today I made my first C Program.</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q2</span>
+<h4>Write a program to read a character from the keyboard and display it on the screen.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Using the classic <code>getche()</code> helps read an arbitrary key command from the active interface console input grid, echoing it instantly back out to the viewport.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char ch;
+clrscr();
+printf("Enter any character: ");
+ch = getche(); 
+printf("\nYou entered: %c\n", ch);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter any character: A
+You entered: A</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q3</span>
+<h4>Write a program to read only 4 characters from the keyboard and display it on the screen in a separate line.</h4>
+<div class="answer-t">
+<strong>Answer:</strong> We track exactly four discrete key entries sequentially using standard character configurations, formatting the output variables line by line.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char c1, c2, c3, c4;
+clrscr();
+printf("Enter 4 characters: ");
+c1 = getch(); printf("*");
+c2 = getch(); printf("*");
+c3 = getch(); printf("*");
+c4 = getch(); printf("*");
+printf("\nCharacters in separate lines:\n");
+printf("%c\n%c\n%c\n%c\n", c1, c2, c3, c4);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter 4 characters: ****
+Characters in separate lines:
+B
+C
+A
+1
+</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q4</span>
+<h4>Write a program to print your name at center of the first line.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Horizontal tracking spacing alignment is set up using sequential escape tab operators (<code>\t</code>).
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+clrscr();
+printf("\t\t\t\tYOUR NAME\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>                                YOUR NAME</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q5</span>
+<h4>Write a program to store single quote and print that variable to show single quote on output screen.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Storing single quotation mark characters explicitly requires localized escape syntax formatting rules (<code>\'</code>) to pass compiler validation metrics.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char ch = '\'';
+clrscr();
+printf("Stored character is: %c\n", ch);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Stored character is: '</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q6</span>
+<h4>Write a program for printing your name on output screen but your name should blink 5 times.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Pulsing text attributes mimic true terminal blinks by grouping time delay triggers alongside active window clearing functions.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt; 
+void main() 
+{
+int i;
+clrscr();
+for(i = 1; i <= 5; i++) {
+printf("YOUR NAME");
+delay(500); 
+clrscr();   
+delay(300); 
+}
+printf("YOUR NAME\n"); 
+getch();
+}</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>YOUR NAME</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q7</span>
+<h4>Write a program to print your name at center of the first line ?</h4>
+<div class="answer-text">
+<strong>Answer:</strong> An alternate text centering architecture applies customized structural empty space padding groups to shift programmatic strings directly to column fields.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+clrscr();
+printf("                               YOUR NAME\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>                               YOUR NAME</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q8</span>
+<h4>Write the program to display this exact output (#include, void main...)?</h4>
+<div class="answer-text">
+<strong>Answer:</strong> The program leverages standard format string parameters to construct complete text layouts replicating system files onto user dashboards.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main() 
+{
+clrscr();
+printf("#include\n#include\n#include\nvoid main ()\n{\nclrscr();\nprintf(\"hello,welcome to c\");\ndelay(5000);\n}\n");
+delay(5000);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>#include
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main ()
+{
+clrscr();
+printf("hello,welcome to c");
+delay(5000);
+}</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q9</span>
+<h4>Write a program to print your name at the center of the page ?</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This program shifts text down with vertical lines using <code>\n</code> and moves horizontally with <code>\t</code> to reach the middle.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+clrscr();
+printf("\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\tYOUR NAME\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>                                 YOUR NAME</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q10</span>
+<h4>Write a program to store single quote and print that variable to show single quote on output screen ?</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Single quotes can be displayed on the screen dynamically by assigning the decimal number 39, which represents its standard ASCII table configuration value.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char sq = 39; 
+clrscr();
+printf("Single Quote using ASCII: %c\n", sq);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Single Quote using ASCII: '</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q11</span>
+<h4>Write a program for printing your name on output screen but your name should blink 5 time ?</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This solution tracks iteration counts using a conditional loop layout that cycles through delay markers and window refreshes to create a flashing text attribute.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main() 
+{
+int count = 0;
+clrscr();
+while(count < 5) {
+printf("YOUR NAME");
+delay(400);
+clrscr();
+delay(400);
+count++;
+}
+printf("YOUR NAME\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>YOUR NAME</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q12</span>
+<h4>Enter password display like ****** ?</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Hiding incoming keys safely relies on mapping an unbuffered terminal receiver function continuously while rendering layout masks over the output view interface.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char password[20];
+int i = 0;
+char ch;
+clrscr();
+printf("Enter password: ");
+while(1) {
+ch = getch();
+if(ch == 13) { 
+password[i] = '\0';
+break;
+}
+password[i] = ch;
+i++;
+printf("*"); 
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter password: ******</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q13</span>
+<h4>Enter two character from user and print ASCII value ?</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Printing a raw character data item through signed integer format definitions forces the binary compiler engine to reveal its exact numerical code identity mapping.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char ch1, ch2;
+clrscr();
+printf("Enter two characters: ");
+scanf(" %c %c", &ch1, &ch2);
+printf("ASCII of %c = %d\n", ch1, ch1);
+printf("ASCII of %c = %d\n", ch2, ch2);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter two characters: A B
+ASCII of A = 65
+ASCII of B = 66</pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q14</span>
+<h4>Print all ASCII character 0 to 127 ?</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This program steps linearly through core execution bounds from position 0 up to 127 to print structured translations of system values sequentially.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int i;
+clrscr();
+for(i = 0; i <= 127; i++) {
+printf("%d = %c\t", i, i);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>0 =      1 =      ...  65 = A   66 = B  ... 127 = </pre>
+</div>
+</div>
+<div class="question-card" data-topic="basic-io" style="display: none;">
+<span class="badge">Basic IO - Q15</span>
+<h4>Q6.How are strings terminated in C language?</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Strings in C are character arrays terminated automatically by a null character constant represented as 
+<code>'\0'</code>.
+</div>
+</div>
+<div class="question-card" data-topic="operators">
+<span class="badge">Operators - Q1</span>
+<h4>Write a program to show an example of pre-increment.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> The pre-increment operator (<code>++i</code>) adds 1 to the variable instantly, and the expression reads the newly updated value.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int a = 5, b;
+clrscr();
+b = ++a;
+printf("After pre-increment (++a):\n");
+printf("Value of a: %d\n", a);
+printf("Value of b (result): %d\n", b);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>After pre-increment (++a):
+Value of a: 6
+Value of b (result): 6</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="operators" style="display: none;">
+<span class="badge">Operators - Q2</span>
+<h4>Write a program to show an example of post-increment.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> The post-increment operator (<code>i++</code>) retains the current value for expression calculation first, and then adds 1 to the variable container afterward.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int a = 5, b;
+clrscr();
+b = a++;
+printf("After post-increment (a++):\n");
+printf("Value of a: %d\n", a);
+printf("Value of b (result): %d\n", b);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>After post-increment (a++):
+Value of a: 6
+Value of b (result): 5</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="operators" style="display: none;">
+<span class="badge">Operators - Q3</span>
+<h4>Write a program to show an example of pre-decrement.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> The pre-decrement operator (<code>--i</code>) subtracts 1 from the variable value immediately before it gets used in any enclosing statement logic.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int a = 5, b;
+clrscr();
+b = --a;
+printf("After pre-decrement (--a):\n");
+printf("Value of a: %d\n", a);
+printf("Value of b (result): %d\n", b);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>After pre-decrement (--a):
+Value of a: 4
+Value of b (result): 4</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="operators" style="display: none;">
+<span class="badge">Operators - Q4</span>
+<h4>Write a program to show an example of post-decrement.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> The post-decrement operator (<code>i--</code>) processes the active statement using the current value, dropping the variable's internal value by 1 right after.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int a = 5, b;
+clrscr();
+b = a--;
+printf("After post-decrement (a--):\n");
+printf("Value of a: %d\n", a);
+printf("Value of b (result): %d\n", b);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>After post-decrement (a--):
+Value of a: 4
+Value of b (result): 5</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="operators" style="display: none;">
+<span class="badge">Operators - Q5</span>
+<h4>Write a program to perform basic arithmetic operations (addition, subtraction, multiplication, division, and remainder) sequentially by taking input pairs from the user.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This solution demonstrates standard sequential execution of the core arithmetic symbols (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>) across consecutive input blocks.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int n1, n2;
+clrscr();
+printf("Enter 2 numbers to add: ");
+scanf("%d%d", &amp;n1, &amp;n2);
+printf("Sum = %d\n\n", n1 + n2);
+printf("Enter 2 numbers to subtract: ");
+scanf("%d%d", &amp;n1, &amp;n2);
+printf("Difference = %d\n\n", n1 - n2);
+printf("Enter 2 numbers to multiply: ");
+scanf("%d%d", &amp;n1, &amp;n2);
+printf("Product = %d\n\n", n1 * n2);
+printf("Enter 2 numbers to divide: ");
+scanf("%d%d", &amp;n1, &amp;n2);
+printf("Quotient = %d\n\n", n1 / n2);
+printf("Enter 2 numbers for remainder: ");
+scanf("%d%d", &amp;n1, &amp;n2);
+printf("Remainder = %d\n", n1 % n2);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter 2 numbers to add: 10 5
+Sum = 15
+
+Enter 2 numbers to subtract: 20 8
+Difference = 12
+
+Enter 2 numbers to multiply: 4 5
+Product = 20
+
+Enter 2 numbers to divide: 15 3
+Quotient = 5
+
+Enter 2 numbers for remainder: 17 5
+Remainder = 2</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="operators" style="display: none;">
+<span class="badge">Operators - Q6</span>
+<h4>Write a program to enter an integer of any length and print its last digit.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Applying <code>num % 10</code> securely isolates the final value digit position regardless of how many digits long the input integer is.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+long num;
+int lastDigit;
+clrscr();
+printf("Enter any integer: ");
+scanf("%ld", &amp;num);
+lastDigit = num % 10;
+printf("The last digit is: %d\n", lastDigit);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter any integer: 84629
+The last digit is: 9</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="operators" style="display: none;">
+<span class="badge">Operators - Q7</span>
+<h4>Write a program to input a float decimal value and print only the numbers to the right of the decimal point.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Typecasting a float variable directly into an integer isolates its whole number section. Subtracting that value from the original floating point isolates the right-hand fraction fields.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+float num, rightSide;
+int leftSide;
+clrscr();
+printf("Enter a decimal number: ");
+scanf("%f", &amp;num);
+leftSide = (int)num;
+rightSide = num - leftSide;
+printf("Right hand side of decimal: %f\n", rightSide);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a decimal number: 45.382
+Right hand side of decimal: 0.382000</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="operators" style="display: none;">
+<span class="badge">Operators - Q8</span>
+<h4>Write a program to calculate the cube of an entered number.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Multiplying a base integer value variable across three consecutive inline configurations yields its perfect algebraic cube calculation.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num, cube;
+clrscr();
+printf("Enter a number: ");
+scanf("%d", &amp;num);
+cube = num * num * num;
+printf("Cube of %d is: %d\n", num, cube);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a number: 4
+Cube of 4 is: 64</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="operators" style="display: none;">
+<span class="badge">Operators - Q9</span>
+<h4>Write a program to read a float variable value and round it off to the nearest integer.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Adding exactly <code>0.5</code> directly to a float expression before typecasting truncates trailing values down to match accurate math rounding scales.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+float num;
+int rounded;
+clrscr();
+printf("Enter a float number: ");
+scanf("%f", &amp;num);
+rounded = (int)(num + 0.5);
+printf("Rounded value: %d\n", rounded);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a float number: 7.6
+Rounded value: 8</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="operators" style="display: none;">
+<span class="badge">Operators - Q10</span>
+<h4>Write a program to convert a lower-case alphabetical character into an upper-case formatting structure.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Subtracting exactly <code>32</code> from an active lower-case char code value shifts its underlying ASCII layout mapping directly onto upper-case ranges.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char lower, upper;
+clrscr();
+printf("Enter a lowercase character: ");
+scanf("%c", &amp;lower);
+upper = lower - 32;
+printf("Uppercase character is: %c\n", upper);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a lowercase character: g
+Uppercase character is: G</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="operators" style="display: none;">
+<span class="badge">Operators - Q11</span>
+<h4>Write a program to enter the exam marks of 3 separate subjects and calculate their precise average value.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Dividing the aggregate calculated sum variables across float parameters produces precise decimal averages while safeguarding computational precision.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+float m1, m2, m3, avg;
+clrscr();
+printf("Enter marks for 3 subjects: ");
+scanf("%f%f%f", &amp;m1, &amp;m2, &amp;m3);
+avg = (m1 + m2 + m3) / 3.0;
+printf("Average marks: %.2f\n", avg);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter marks for 3 subjects: 78 85 92
+Average marks: 85.00</pre>
+</div>
+</div>
+<div class="question-card" data-topic="operators" style="display: none;">
+<span class="badge">Operators - Q12</span>
+<h4>Calculate simple interest = (P x R x T)/ 100</h4>
+<div class="answer-text">
+<strong>Answer:</strong>Applying the fundamental linear equation structure (<code>(P * R * T) / 100</code>) yields simple financial interest data calculations.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+float principal, rate, time, si;
+clrscr();
+printf("Enter Principal, Rate, and Time (in years): ");
+Use code with caution.
+scanf("%f%f%f", &principal, &rate, &time);
+si = (principal * rate * time) / 100.0;
+printf("Calculated Simple Interest = %.2f\n", si);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter Principal, Rate, and Time (in years): 5000 7.5 2
+Calculated Simple Interest = 750.00</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision">
+<span class="badge">Decision - Q1</span>
+<h4>Write a program to enter a number from the user and check if it is positive, negative, or zero.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This program routes execution flow through standard conditional branches (<code>if-else if-else</code>) based on the number's numeric relationship to zero.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num;
+clrscr();
+printf("Enter an integer: ");
+scanf("%d", &amp;num);
+if(num &gt; 0)
+printf("%d is Positive.\n", num);
+else if(num &lt; 0)
+printf("%d is Negative.\n", num);
+else
+printf("The number is Zero.\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter an integer: -15
+-15 is Negative.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q2</span>
+<h4>Write a program to enter a number from the user and check if it is odd or even.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> An <code>if-else</code> conditional pattern checks the remainder of division by 2 to determine if the variable structure matches even parity metrics.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num;
+clrscr();
+printf("Enter a number: ");
+scanf("%d", &amp;num);
+if(num % 2 == 0)
+printf("%d is Even.\n", num);
+else
+printf("%d is Odd.\n", num);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a number: 47
+47 is Odd.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q3</span>
+<h4>Write a program to enter a number from the user and check if it is of 1 digit, 2 digits, 3 digits, 4 digits, or 5 digits.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Sequential numerical threshold evaluations run across value boundaries to group integers into their respective digit lengths.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+long num;
+clrscr();
+printf("Enter a positive integer: ");
+scanf("%ld", &amp;num);
+if(num &gt;= 0 &amp;&amp; num &lt;= 9)
+printf("1 digit number\n");
+else if(num &gt;= 10 &amp;&amp; num &lt;= 99)
+printf("2 digit number\n");
+else if(num &gt;= 100 &amp;&amp; num &lt;= 999)
+printf("3 digit number\n");
+else if(num &gt;= 1000 &amp;&amp; num &lt;= 9999)
+printf("4 digit number\n");
+else if(num &gt;= 10000 &amp;&amp; num &lt;= 99999)
+printf("5 digit number\n");
+else
+printf("Number is out of range\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a positive integer: 382
+3 digit number</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q4</span>
+<h4>Write a program to calculate grades: 0-40 prints Fail, 40-60 prints C grade, 60-80 prints B grade, 80-100 prints A grade, and others are invalid.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Relational and conditional logical AND operator configurations (<code>&amp;&amp;</code>) segment score brackets securely into educational metrics.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int marks;
+clrscr();
+printf("Enter marks (0-100): ");
+scanf("%d", &amp;marks);
+if(marks &gt;= 0 &amp;&amp; marks &lt; 40)
+printf("Result: Fail\n");
+else if(marks &gt;= 40 &amp;&amp; marks &lt; 60)
+printf("Grade: C\n");
+else if(marks &gt;= 60 &amp;&amp; marks &lt; 80)
+printf("Grade: B\n");
+else if(marks &gt;= 80 &amp;&amp; marks &lt;= 100)
+printf("Grade: A\n");
+else
+printf("Invalid Marks entered!\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter marks (0-100): 72
+Grade: B</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q5</span>
+<h4>Write a program to enter a number from the user and check if it is a decimal number or not.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Comparing the raw float variable input directly against its truncated integer value counterpart isolates hidden fractional values.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+float num;
+clrscr();
+printf("Enter any number: ");
+scanf("%f", &amp;num);
+if(num == (int)num)
+printf("It is NOT a decimal number (Integer).\n");
+else
+printf("It IS a decimal number.\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter any number: 12.54
+It IS a decimal number.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q6</span>
+<h4>Write a program to enter a number; if negative convert to positive, and if positive convert to negative, then print it.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Negation inversion architecture updates the polarity fields of variables by shifting execution sign attributes directly.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num;
+clrscr();
+printf("Enter a non-zero number: ");
+scanf("%d", &amp;num);
+if(num != 0) {
+num = -num;
+printf("Inverted value: %d\n", num);
+} else {
+printf("Zero remains neutral.\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a non-zero number: -45
+Inverted value: 45</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q7</span>
+<h4>Write a program to enter a character from the user and check if it is an alphabet.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Checking value positions inside ASCII lookup thresholds isolates characters inside specific ranges (A-Z and a-z).
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char ch;
+clrscr();
+printf("Enter any character: ");
+scanf("%c", &amp;ch);
+if((ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z') || (ch &gt;= 'a' &amp;&amp; ch &lt;= 'z'))
+printf("%c is an Alphabet.\n", ch);
+else
+printf("%c is NOT an Alphabet.\n", ch);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter any character: k
+k is an Alphabet.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q8</span>
+<h4>Write a program to square a number if it is negative, and increment it 20 times if it is positive.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Branch paths perform alternative operations, updating variables dynamically according to input sign states.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num;
+clrscr();
+printf("Enter an integer: ");
+scanf("%d", &amp;num);
+if(num &lt; 0) {
+num = num * num;
+printf("Result (Squared): %d\n", num);
+} else {
+num = num + 20;
+printf("Result (Incremented by 20): %d\n", num);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter an integer: 5
+Result (Incremented by 20): 25</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q9</span>
+<h4>Write a program to enter a number and find its absolute magnitude value.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Conditional tracking isolates negative variables, executing a multiplicative inversion to produce raw magnitude updates.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num, abs_val;
+clrscr();
+printf("Enter any integer: ");
+scanf("%d", &amp;num);
+if(num &lt; 0)
+abs_val = -num;
+else
+abs_val = num;
+printf("The absolute value is: %d\n", abs_val);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter any integer: -82
+The absolute value is: 82</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q10</span>
+<h4>Write a program to enter two numbers from the user, check which is greater, and print the greater number.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Relational expressions determine maximum numerical values by validating primary value sizes against secondary inputs.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num1, num2;
+clrscr();
+printf("Enter two integers: ");
+scanf("%d%d", &amp;num1, &amp;num2);
+if(num1 &gt; num2)
+printf("%d is greater.\n", num1);
+else if(num2 &gt; num1)
+printf("%d is greater.\n", num2);
+else
+printf("Both numbers are equal.\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter two integers: 84 39
+84 is greater.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q11</span>
+<h4>Write a program to enter a number from the user and check if it is divisible by 4 or not.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> The modulo operator checks if the remaining balance after dividing by 4 equals 0, verifying clean factor matching status.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num;
+clrscr();
+printf("Enter a number: ");
+scanf("%d", &amp;num);
+if(num % 4 == 0)
+printf("%d is divisible by 4.\n", num);
+else
+printf("%d is not divisible by 4.\n", num);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a number: 18
+18 is not divisible by 4.</pre>
+</div>
+</div>
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q12</span>
+<h4>Write a program to enter four characters from the user and check if they are all equal.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Compound equality expressions match variables sequentially to confirm parity across the dataset.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char c1, c2, c3, c4;
+clrscr();
+printf("Enter 4 characters continuously: ");
+scanf(" %c %c %c %c", &amp;c1, &amp;c2, &amp;c3, &amp;c4);
+if(c1 == c2 &amp;&amp; c2 == c3 &amp;&amp; c3 == c4)
+printf("All characters are equal.\n");
+else
+printf("Characters are not equal.\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter 4 characters continuously: A A A A
+All characters are equal.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q13</span>
+<h4>Write a program to enter three numbers from the user and determine which is greater.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Nested conditional patterns analyze value arrays to isolate the largest element among three individual configurations.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int a, b, c;
+clrscr();
+printf("Enter three numbers: ");
+scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
+if(a &gt; b &amp;&amp; a &gt; c)
+printf("%d is the greatest.\n", a);
+else if(b &gt; a &amp;&amp; b &gt; c)
+printf("%d is the greatest.\n", b);
+else
+printf("%d is the greatest.\n", c);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter three numbers: 45 92 12
+92 is the greatest.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q14</span>
+<h4>Write a program to display month categories depending on days matching criteria input (30, 31, 28/29).</h4>
+<div class="answer-text">
+<strong>Answer:</strong> An expression routing switch maps integer metrics directly onto localized descriptive terminal outputs.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int days;
+clrscr();
+printf("Enter number of days (28/29/30/31): ");
+scanf("%d", &amp;days);
+switch(days) {
+case 30:
+printf("Months: April, June, September, November\n");
+break;
+case 31:
+printf("Months: January, March, May, July, August, October, December\n");
+break;
+case 28:
+case 29:
+printf("Month: February\n");
+break;
+default:
+printf("Everything is invalid!\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter number of days (28/29/30/31): 30
+Months: April, June, September, November</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q15</span>
+<h4>Write a program to enter a single-digit number from the user and print it in words.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Conditional matching links discrete value parameters with text equivalents using a switch structure.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int digit;
+clrscr();
+printf("Enter a single digit (0-9): ");
+scanf("%d", &amp;digit);
+switch(digit) {
+case 0: printf("Zero\n"); break;
+case 1: printf("One\n"); break;
+case 2: printf("Two\n"); break;
+case 3: printf("Three\n"); break;
+case 4: printf("Four\n"); break;
+case 5: printf("Five\n"); break;
+case 6: printf("Six\n"); break;
+case 7: printf("Seven\n"); break;
+case 8: printf("Eight\n"); break;
+case 9: printf("Nine\n"); break;
+default: printf("Not a single digit!\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a single digit (0-9): 4
+Four</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q16</span>
+<h4>Write a program to check if two characters are the same; if not, calculate the difference between their ASCII values.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Character value verification isolates differences, using basic subtraction to measure spacing intervals inside the ASCII matrix.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char ch1, ch2;
+int diff;
+clrscr();
+printf("Enter two characters: ");
+scanf(" %c %c", &amp;ch1, &amp;ch2);
+if(ch1 == ch2) {
+printf("Both characters are the same.\n");
+} else {
+diff = ch1 - ch2;
+if(diff &lt; 0) diff = -diff;
+printf("Not same. Absolute ASCII difference: %d\n", diff);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter two characters: A D
+Not same. Absolute ASCII difference: 3</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q17</span>
+<h4>Write a program to enter three numbers from the user and find the greatest value (Alternative layout approach).</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Logical comparison blocks efficiently isolate peak metric components among input fields.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int x, y, z, max;
+clrscr();
+printf("Enter three integers: ");
+scanf("%d%d%d", &amp;x, &amp;y, &amp;z);
+max = x;
+if(y &gt; max) max = y;
+if(z &gt; max) max = z;
+printf("Greatest value is: %d\n", max);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter three integers: 10 55 23
+Greatest value is: 55</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q18</span>
+<h4>Write a program to enter a two-digit number and print it in words digit-by-digit (e.g., 50 displays as "Five Zero").</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Dissecting digits using modular division isolates positions, processing each structural token through standard translation switches.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num, first, second;
+clrscr();
+printf("Enter a 2-digit number: ");
+scanf("%d", &amp;num);
+if(num &gt;= 10 &amp;&amp; num &lt;= 99) {
+first = num / 10;
+second = num % 10;
+printf("In words: ");
+switch(first) {
+case 1: printf("One "); break;
+case 2: printf("Two "); break;
+case 3: printf("Three "); break;
+case 4: printf("Four "); break;
+case 5: printf("Five "); break;
+case 6: printf("Six "); break;
+case 7: printf("Seven "); break;
+case 8: printf("Eight "); break;
+case 9: printf("Nine "); break;
+}
+switch(second) {
+case 0: printf("Zero\n"); break;
+case 1: printf("One\n"); break;
+case 2: printf("Two\n"); break;
+case 3: printf("Three\n"); break;
+case 4: printf("Four\n"); break;
+case 5: printf("Five\n"); break;
+case 6: printf("Six\n"); break;
+case 7: printf("Seven\n"); break;
+case 8: printf("Eight\n"); break;
+case 9: printf("Nine\n"); break;
+}
+} else {
+printf("Invalid input! Not a 2-digit number.\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a 2-digit number: 50
+In words: Five Zero</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q19</span>
+<h4>Write a program to check if an entered character is uppercase, lowercase, a special character, or a number.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Conditional evaluation chains read exact character indices to classify tokens into their standard system archetypes.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char ch;
+clrscr();
+printf("Enter any character: ");
+scanf("%c", &amp;ch);
+if(ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z')
+printf("Uppercase Alphabet.\n");
+else if(ch &gt;= 'a' &amp;&amp; ch &lt;= 'z')
+printf("Lowercase Alphabet.\n");
+else if(ch &gt;= '0' &amp;&amp; ch &lt;= '9')
+printf("Digit/Number.\n");
+else
+printf("Special Character.\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter any character: $
+Special Character.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q20</span>
+<h4>Write a program to enter a year from the user and check if it is a leap year.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Compound relational rules evaluate century bounds and factor visibility metrics to track accurate shifting calendars.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int year;
+clrscr();
+printf("Enter a year: ");
+scanf("%d", &amp;year);
+if((year % 4 == 0 &amp;&amp; year % 100 != 0) || (year % 400 == 0))
+printf("%d is a Leap Year.\n", year);
+else
+printf("%d is not a Leap Year.\n", year);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a year: 2024
+2024 is a Leap Year.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q21</span>
+<h4>Write a program to enter a date, month, and year, and check if it is a valid calendar date.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This solution runs comprehensive structure testing checks against calendar boundary limits and shifting leap month states.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int d, m, y, is_valid = 1;
+clrscr();
+printf("Enter Date, Month, Year: ");
+scanf("%d%d%d", &amp;d, &amp;m, &amp;y);
+if(y &lt; 1 || m &lt; 1 || m &gt; 12 || d &lt; 1)
+is_valid = 0;
+else {
+if(m == 4 || m == 6 || m == 9 || m == 11) {
+if(d &gt; 30) is_valid = 0;
+} else if(m == 2) {
+if((y % 4 == 0 &amp;&amp; y % 100 != 0) || (y % 400 == 0)) {
+if(d &gt; 29) is_valid = 0;
+} else {
+if(d &gt; 28) is_valid = 0;
+}
+} else {
+if(d &gt; 31) is_valid = 0;
+}
+}
+if(is_valid)
+printf("Valid Date.\n");
+else
+printf("Invalid Date!\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter Date, Month, Year: 29 2 2023
+Invalid Date!</pre>
+</div>
+</div>
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q22</span>
+<h4>Write a program to enter a user's Date of Birth alongside the current date to calculate their exact age in years.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Conditional check branches analyze current timeline progress, tracking if birth dates have been crossed to output true year durations.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int cd, cm, cy, bd, bm, by, age;
+clrscr();
+printf("Enter Current Date, Month, Year: ");
+scanf("%d%d%d", &amp;cd, &amp;cm, &amp;cy);
+printf("Enter Birth Date, Month, Year: ");
+scanf("%d%d%d", &amp;bd, &amp;bm, &amp;by);
+age = cy - by;
+if(cm &lt; bm || (cm == bm &amp;&amp; cd &lt; bd)) {
+age--;
+}
+printf("Calculated Age: %d years\n", age);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter Current Date, Month, Year: 31 10 2026
+Enter Birth Date, Month, Year: 15 12 2005
+Calculated Age: 20 years</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="decision" style="display: none;">
+<span class="badge">Decision - Q23</span>
+<h4>Write a program to calculate the area and perimeter of a rectangle with positive validation tracking.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Conditional statements ensure input dimension constraints are structurally positive values before firing equations.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+float l, w, area, peri;
+clrscr();
+printf("Enter length and width: ");
+scanf("%f%f", &amp;l, &amp;w);
+if(l &gt; 0 &amp;&amp; w &gt; 0) {
+area = l * w;
+peri = 2 * (l + w);
+printf("Area = %.2f\nPerimeter = %.2f\n", area, peri);
+} else {
+printf("Error: Dimensions must be greater than zero!\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter length and width: -5 10
+Error: Dimensions must be greater than zero!</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops">
+<span class="badge">Loops - Q1</span>
+<h4>Write a program to enter a number from the user and find out the binary representation of that number.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This program isolates remainder bits dynamically using the modulo 2 operation and processes place values inside a loop structure to stitch together the binary integer.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+long num, decimal, binary = 0, place = 1;
+clrscr();
+printf("Enter a decimal number: ");
+scanf("%ld", &amp;num);
+decimal = num;
+while(num &gt; 0) {
+binary = binary + (num % 2) * place;
+num = num / 2;
+place = place * 10;
+}
+printf("Binary of %ld is: %ld\n", decimal, binary);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a decimal number: 13
+Binary of 13 is: 1101</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q2</span>
+<h4>Write a program to enter a number from the user and check if the number is divisible by any prime number or not.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Every integer greater than 1 is inherently divisible by at least one prime factor, which is verified dynamically by checking the lowest matching divisor loop bound.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num, i, isDivisible = 0;
+clrscr();
+printf("Enter a number: ");
+scanf("%d", &amp;num);
+if(num &gt; 1) {
+for(i = 2; i &lt;= num; i++) {
+if(num % i == 0) {
+isDivisible = 1;
+break;
+}
+}
+}
+if(isDivisible)
+printf("%d is divisible by prime numbers.\n", num);
+else
+printf("Not applicable.\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a number: 35
+35 is divisible by prime numbers.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q3</span>
+<h4>Write a program to enter a number from the user and check if it is a prime number or not.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> A loop runs trial divisions up to half of the input number; if any clean factor match is found, the prime validation state flag gets invalidated.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num, i, isPrime = 1;
+clrscr();
+printf("Enter a positive integer: ");
+scanf("%d", &amp;num);
+if(num &lt;= 1) isPrime = 0;
+for(i = 2; i &lt;= num / 2; i++) {
+if(num % i == 0) {
+isPrime = 0;
+break;
+}
+}
+if(isPrime)
+printf("%d is a Prime Number.\n", num);
+else
+printf("%d is NOT a Prime Number.\n", num);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a positive integer: 17
+17 is a Prime Number.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q4</span>
+<h4>Write a program to enter a number from the user and print all digits of the number in separate lines.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> The layout logic reverses the original variable stream so that digits can be peeled off left-to-right using standard loop reductions.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+long num, rev = 0;
+clrscr();
+printf("Enter a number: ");
+scanf("%ld", &amp;num);
+while(num &gt; 0) {
+rev = (rev * 10) + (num % 10);
+num = num / 10;
+}
+printf("Digits in separate lines:\n");
+while(rev &gt; 0) {
+printf("%ld\n", rev % 10);
+rev = rev / 10;
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a number: 5821
+Digits in separate lines:
+5
+8
+2
+1</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q5</span>
+<h4>Write a program to print your name 1 lakh (100,000) times.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> A long integer loop counter increments systematically from 1 up to 100,000 to automate heavy repetition metrics.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+long i;
+clrscr();
+for(i = 1; i &lt;= 100000L; i++) {
+printf("YOUR NAME\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>...
+YOUR NAME
+YOUR NAME
+[Printed 100,000 times]</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q6</span>
+<h4>Write a program to print a continuous series from 1 to 1 lakh (100,000).</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This template prints the value of a tracking variable step-by-step using a high-bound <code>for</code> loop limit.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+long i;
+clrscr();
+for(i = 1; i &lt;= 100000L; i++) {
+printf("%ld ", i);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>1 2 3 4 5 ... 100000</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q7</span>
+<h4>Write a program to enter a number from the user and print the series from 1 to that number.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> The program dynamically adapts its termination criteria boundary using a threshold limit variable provided by the user.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num, i;
+clrscr();
+printf("Enter the target limit: ");
+scanf("%d", &amp;num);
+for(i = 1; i &lt;= num; i++) {
+printf("%d ", i);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter the target limit: 8
+1 2 3 4 5 6 7 8</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q8</span>
+<h4>Write a program to enter a number from the user and print that number 100 times.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> An isolated iterative statement locks a tracking variable loop exactly 100 times while continuously writing out the fixed input content.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num, i;
+clrscr();
+printf("Enter a number: ");
+scanf("%d", &amp;num);
+for(i = 1; i &lt;= 100; i++) {
+printf("%d ", num);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a number: 7
+7 7 7 7 ... [Printed 100 times]</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q9</span>
+<h4>Write a program to print all the odd numbers between 1 to 100.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Setting the structural loop modification rule to jump by exactly 2 (<code>i += 2</code>) allows the stream to skip all even values with zero conditional overhead.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int i;
+clrscr();
+for(i = 1; i &lt;= 100; i += 2) {
+printf("%d ", i);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>1 3 5 7 9 ... 99</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q10</span>
+<h4>Write a program to print the multiplication table of 4 in the specific format (4*1=4) up to 20.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> A structured format configuration evaluates the expression inline across each progression node to print clear, formatted layout lines.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int i;
+clrscr();
+for(i = 1; i &lt;= 20; i++) {
+printf("4*%d=%d\n", i, 4 * i);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>4*1=4
+4*2=8
+...
+4*20=80</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q11</span>
+<h4>Write a program to enter a number from the user and reverse it.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Shifting intermediate digits left via decimal scaling multiplication (<code>rev * 10</code>) appends individual modulo tracking segments into a fully inverted variable.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+long num, rev = 0, rem;
+clrscr();
+printf("Enter an integer: ");
+scanf("%ld", &amp;num);
+while(num != 0) {
+rem = num % 10;
+rev = (rev * 10) + rem;
+num = num / 10;
+}
+printf("Reversed number: %ld\n", rev);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter an integer: 12345
+Reversed number: 54321</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q12</span>
+<h4>Write a menu-driven calculator program that runs continuously inside an arithmetic loop until the character 'Q' is entered.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Wrapping an inner multi-branch conditional system inside an active continuous loop structure forms a responsive, real-time workspace shell.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char choice;
+int n1, n2;
+while(1) {
+clrscr();
+printf("--- MENU CALCULATOR ---\n");
+printf("1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Modulo\nQ. Quit\n");
+printf("Enter your choice: ");
+choice = getche();
+printf("\n");
+if(choice == 'Q' || choice == 'q') {
+printf("Exiting application...\n");
+break;
+}
+if(choice &gt;= '1' &amp;&amp; choice &lt;= '5') {
+printf("Enter two numbers: ");
+scanf("%d%d", &amp;n1, &amp;n2);
+switch(choice) {
+case '1': printf("Result = %d\n", n1 + n2); break;
+case '2': printf("Result = %d\n", n1 - n2); break;
+case '3': printf("Result = %d\n", n1 * n2); break;
+case '4': if(n2!=0) printf("Result = %d\n", n1 / n2); else printf("Div by 0 error!\n"); break;
+case '5': printf("Result = %d\n", n1 % n2); break;
+}
+} else {
+printf("Invalid selection!\n");
+}
+printf("\nPress any key to continue...");
+getch();
+}
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>--- MENU CALCULATOR ---
+1. Addition
+2. Subtraction
+...
+Enter your choice: 1
+Enter two numbers: 12 8
+Result = 20
+
+Press any key to continue...</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q13</span>
+<h4>Write a program to enter a number from the user and check if it is a palindrome.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Preserving a copy of the original input data structure allows a trailing conditional statement to verify exact equivalence against the final reversed output.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+long num, original, rev = 0, rem;
+clrscr();
+printf("Enter a number: ");
+scanf("%ld", &amp;num);
+original = num;
+while(num &gt; 0) {
+rem = num % 10;
+rev = (rev * 10) + rem;
+num = num / 10;
+}
+if(original == rev)
+printf("%ld is a Palindrome.\n", original);
+else
+printf("%ld is NOT a Palindrome.\n", original);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a number: 12321
+12321 is a Palindrome.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q14</span>
+<h4>Write a program to calculate the result of a base value raised to a specific exponential power using loops.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> An iterative multiplication structure evaluates structural powers without using math library headers by looping explicitly up to the power metric tracking bound.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int base, power, i;
+long result = 1;
+clrscr();
+printf("Enter base and power values: ");
+scanf("%d%d", &amp;base, &amp;power);
+for(i = 1; i &lt;= power; i++) {
+result *= base;
+}
+printf("Result: %ld\n", result);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter base and power values: 2 5
+Result: 32</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q15</span>
+<h4>Write a program to enter a number from the user and isolate its first/leading digit.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> A reduction statement loop scales down integer parameters via continuous division until only the single highest placeholder value remain.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+long num, first;
+clrscr();
+printf("Enter any integer: ");
+scanf("%ld", &amp;num);
+first = num;
+while(first &gt;= 10) {
+first = first / 10;
+}
+printf("The first digit is: %ld\n", first);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter any integer: 74291
+The first digit is: 7</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q16</span>
+<h4>Write a program to calculate the total sum from 0 to an entered number value.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> An accumulator pattern increments a sum storage container continuously across each structural step of the loop progression.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num, i;
+long total = 0;
+clrscr();
+printf("Enter target boundary number: ");
+scanf("%d", &amp;num);
+for(i = 0; i &lt;= num; i++) {
+total += i;
+}
+printf("Total aggregate sum = %ld\n", total);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter target boundary number: 10
+Total aggregate sum = %ld</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q17</span>
+<h4>Write a program to enter a number from the user and calculate its factorial.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Multiplicative compound assignments loop descending sequences continuously down to 1 to compute factorials.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num, i;
+long fact = 1;
+clrscr();
+printf("Enter a number: ");
+scanf("%d", &amp;num);
+for(i = 1; i &lt;= num; i++) {
+fact *= i;
+}
+printf("Factorial of %d is: %ld\n", num, fact);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a number: 5
+Factorial of 5 is: 120</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q18</span>
+<h4>Write a program to take a starting and ending number from the user and print the full range series between them.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> The variable configuration tracks lower bound initial conditions and shifts step parameters forward to print custom numeric spans.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int start, end, i;
+clrscr();
+printf("Enter starting and ending limits: ");
+scanf("%d%d", &amp;start, &amp;end);
+printf("Range output: ");
+for(i = start; i &lt;= end; i++) {
+printf("%d ", i);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter starting and ending limits: 12 18
+Range output: 12 13 14 15 16 17 18</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q19</span>
+<h4>Write a program to accept a password input up to 20 characters, masking inputs with asterisks and ending when the Enter key is pressed.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Capturing discrete un-echoed keystrokes via <code>getch()</code> dynamically validates termination conditions while outputting secure masking marks.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char pass, ch;
+int i = 0;
+clrscr();
+printf("Enter password (Max 20 chars, press Enter to finish): ");
+while(i &lt; 20) {
+ch = getch();
+if(ch == 13) { 
+break;
+}
+pass[i] = ch;
+i++;
+printf("*"); 
+}
+pass[i] = '\0'; 
+printf("\nPassword entry successfully processed.\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter password (Max 20 chars, press Enter to finish): *******
+Password entry successfully processed.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q20</span>
+<h4>Write a program to print numbers from 1 to 100 with an explicit 1-second delay between each value.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Integrating structural hardware timing delay calls (<code>delay(1000)</code>) controls execution speed inside loop operations.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main() 
+{
+int i;
+clrscr();
+for(i = 1; i &lt;= 100; i++) {
+printf("%d\n", i);
+delay(1000); 
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>1
+2
+[Values print exactly 1 second apart]</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q21</span>
+<h4>Write a program to find and display the Fibonacci series values up to 100.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Generating next-term variables continuously by summing previous nodes lets a loop build historical numerical chains cleanly.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int t1 = 0, t2 = 1, nextTerm = 0;
+clrscr();
+printf("Fibonacci series up to 100:\n");
+printf("%d %d ", t1, t2);
+nextTerm = t1 + t2;
+while(nextTerm &lt;= 100) {
+printf("%d ", nextTerm);
+t1 = t2;
+t2 = nextTerm;
+nextTerm = t1 + t2;
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Fibonacci series up to 100:
+0 1 1 2 3 5 8 13 21 34 55 89</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q22</span>
+<h4>Write a program that prompts continuously until the user enters a valid alphabetical character.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> A conditional validation condition loop wraps terminal input calls to trap invalid options until clean conditions match.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+char ch;
+clrscr();
+while(1) {
+printf("Enter an alphabet character: ");
+scanf(" %c", &amp;ch);
+if((ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z') || (ch &gt;= 'a' &amp;&amp; ch &lt;= 'z')) {
+printf("Valid choice: %c\n", ch);
+break;
+}
+printf("Invalid input! Try again.\n\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter an alphabet character: 5
+Invalid input! Try again.
+
+Enter an alphabet character: k
+Valid choice: k</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q23</span>
+<h4>Write a program to check if an entered long integer number is a palindrome (Alternate loop approach).</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This baseline code parses number strings into matching numeric mirrors to ensure absolute structural balance.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+long n, reversed = 0, remainder, original;
+clrscr();
+printf("Enter an integer: ");
+scanf("%ld", &amp;n);
+original = n;
+while(n != 0) {
+remainder = n % 10;
+reversed = reversed * 10 + remainder;
+n /= 10;
+}
+if(original == reversed)
+printf("%ld is a palindrome.\n", original);
+else
+printf("%ld is not a palindrome.\n", original);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter an integer: 4004
+4004 is a palindrome.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q24</span>
+<h4>Write a program to enter a number from the user and check if it is an Armstrong number.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Isolating digits individually and calculating their mathematical cubes inside an accumulator verify structural self-sum properties.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int num, original, remainder, result = 0;
+clrscr();
+printf("Enter a three-digit integer: ");
+scanf("%d", &amp;num);
+original = num;
+while(original != 0) {
+remainder = original % 10;
+result += remainder * remainder * remainder;
+original /= 10;
+}
+if(result == num)
+printf("%d is an Armstrong number.\n", num);
+else
+printf("%d is not an Armstrong number.\n", num);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a three-digit integer: 153
+153 is an Armstrong number.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="loops" style="display: none;">
+<span class="badge">Loops - Q25</span>
+<h4>Write a program to enter a number from the user and check if it is an Armstrong number (Standard validation architecture configuration).</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This solution applies clean tracking logic bounds to isolate numeric segments and verify Armstrong equation matches.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int n, temp, rem, sum = 0;
+clrscr();
+printf("Enter a 3-digit number to check: ");
+scanf("%d", &amp;n);
+temp = n;
+while(temp != 0) {
+rem = temp % 10;
+sum = sum + (rem * rem * rem);
+temp = temp / 10;
+}
+if(sum == n)
+printf("%d matches Armstrong criteria.\n", n);
+else
+printf("%d does not match Armstrong criteria.\n", n);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter a 3-digit number to check: 370
+370 matches Armstrong criteria.</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="nested-loops" style="display: none;">
+<span class="badge">Nested Loops - Q1</span>
+<h4>Write a program to print the following pattern on the screen:
+<br>11111
+<br>11111
+<br>11111</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This layout uses nested loops where the outer loop manages exactly 3 rows and the inner loop manages exactly 5 columns per row, printing the static literal value <code>1</code>.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int i, j;
+clrscr();
+for(i = 1; i &lt;= 3; i++) {
+for(j = 1; j &lt;= 5; j++) {
+printf("1");
+}
+printf("\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>11111
+11111
+11111</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays">
+<span class="badge">Arrays - Q1</span>
+<h4>Write a program to enter elements into a single-dimensional array from the user and display all its values.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This solution uses an initial loop to read elements into contiguous memory slots via sequential indexing, followed by a second loop to stream the stored metrics back to the active console wrapper.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int arr[10], i, n;
+clrscr();
+printf("Enter the number of elements (Max 10): ");
+scanf("%d", &amp;n);
+printf("Enter %d values:\n", n);
+for(i = 0; i &lt; n; i++) {
+scanf("%d", &amp;arr[i]);
+}
+printf("\nArray elements are: ");
+for(i = 0; i &lt; n; i++) {
+printf("%d ", arr[i]);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter the number of elements (Max 10): 4
+Enter 4 values:
+10 20 30 40
+
+Array elements are: 10 20 30 40 </pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q2</span>
+<h4>Write a program to enter an array from the user and print its elements in reverse order.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Altering loop conditions to start from the highest populated index array slot (<code>n - 1</code>) and decrementing down to 0 outputs the array values backward.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int arr[10], i, n;
+clrscr();
+printf("Enter size of array (Max 10): ");
+scanf("%d", &amp;n);
+printf("Enter %d values:\n", n);
+for(i = 0; i &lt; n; i++) {
+scanf("%d", &amp;arr[i]);
+}
+printf("\nArray in reverse order: ");
+for(i = n - 1; i &gt;= 0; i--) {
+printf("%d ", arr[i]);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter size of array (Max 10): 3
+Enter 3 values:
+5 9 12
+
+Array in reverse order: 12 9 5 </pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q3</span>
+<h4>Write a program to enter an array from the user and copy its values into a second array.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> An element-by-element tracking layout assigns values directly across matching index configurations from the primary container block to the secondary buffer array.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int source[10], dest[10], i, n;
+clrscr();
+printf("Enter array size (Max 10): ");
+scanf("%d", &amp;n);
+printf("Enter elements:\n");
+for(i = 0; i &lt; n; i++) {
+scanf("%d", &amp;source[i]);
+}
+for(i = 0; i &lt; n; i++) {
+dest[i] = source[i];
+}
+printf("\nCopied array elements are: ");
+for(i = 0; i &lt; n; i++) {
+printf("%d ", dest[i]);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter array size (Max 10): 4
+Enter elements:
+7 14 21 28
+
+Copied array elements are: 7 14 21 28 </pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q4</span>
+<h4>Write a program to enter an array from the user and copy it into another array in reverse order.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Tracking opposing index loops simultaneously extracts values from trailing positions of the base structure and maps them into ascending tracking points of the backup matrix.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int source[10], dest[10], i, n;
+clrscr();
+printf("Enter array size (Max 10): ");
+scanf("%d", &amp;n);
+printf("Enter elements:\n");
+for(i = 0; i &lt; n; i++) {
+scanf("%d", &amp;source[i]);
+}
+for(i = 0; i &lt; n; i++) {
+dest[i] = source[n - 1 - i];
+}
+printf("\nNew array (reversed storage): ");
+for(i = 0; i &lt; n; i++) {
+printf("%d ", dest[i]);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter array size (Max 10): 3
+Enter elements:
+1 2 3
+
+New array (reversed storage): 3 2 1 </pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q5</span>
+<h4>Write a program to enter an array from the user and print only the numbers that are even.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> An conditional validation check (<code>arr[i] % 2 == 0</code>) inside the tracking array loop layout filters and prints clean even numerical configurations.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int arr[10], i, n;
+clrscr();
+printf("Enter array size (Max 10): ");
+scanf("%d", &amp;n);
+printf("Enter elements:\n");
+for(i = 0; i &lt; n; i++) {
+scanf("%d", &amp;arr[i]);
+}
+printf("\nEven numbers in array: ");
+for(i = 0; i &lt; n; i++) {
+if(arr[i] % 2 == 0) {
+printf("%d ", arr[i]);
+}
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter array size (Max 10): 4
+Enter elements:
+12 15 18 21
+
+Even numbers in array: 12 18 </pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q6</span>
+<h4>Write a program to enter an array from the user and print only the positive numbers.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Relational expressions inside standard iterative blocks evaluate index nodes, isolating parameters greater than zero.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int arr[10], i, n;
+clrscr();
+printf("Enter array size (Max 10): ");
+scanf("%d", &amp;n);
+printf("Enter elements (positive/negative):\n");
+for(i = 0; i &lt; n; i++) {
+scanf("%d", &amp;arr[i]);
+}
+printf("\nPositive numbers are: ");
+for(i = 0; i &lt; n; i++) {
+if(arr[i] &gt; 0) {
+printf("%d ", arr[i]);
+}
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter array size (Max 10): 4
+Enter elements (positive/negative):
+-5 10 -3 22
+
+Positive numbers are: 10 22 </pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q7</span>
+<h4>Write a program to enter an array from the user and square all its values.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Element variables are multiplied by themselves inline across loop points, updating array contents directly.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int arr[10], i, n;
+clrscr();
+printf("Enter array size (Max 10): ");
+scanf("%d", &amp;n);
+printf("Enter elements:\n");
+for(i = 0; i &lt; n; i++) {
+scanf("%d", &amp;arr[i]);
+}
+for(i = 0; i &lt; n; i++) {
+arr[i] = arr[i] * arr[i];
+}
+printf("\nArray after squaring values: ");
+for(i = 0; i &lt; n; i++) {
+printf("%d ", arr[i]);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter array size (Max 10): 3
+Enter elements:
+2 4 5
+
+Array after squaring values: 4 16 25 </pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q8</span>
+<h4>Write a program to enter exactly 5 elements into an array and print only the odd numbers.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Relational expressions isolate values with an active odd parity checking remainder (<code>arr[i] % 2 != 0</code>) inside fixed-limit iteration slots.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int arr[5], i;
+clrscr();
+printf("Enter exactly 5 integers:\n");
+for(i = 0; i &lt; 5; i++) {
+scanf("%d", &amp;arr[i]);
+}
+printf("\nOdd numbers are: ");
+for(i = 0; i &lt; 5; i++) {
+if(arr[i] % 2 != 0) {
+printf("%d ", arr[i]);
+}
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter exactly 5 integers:
+11 22 33 44 55
+
+Odd numbers are: 11 33 55 </pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q9</span>
+<h4>Write a program to enter exactly 5 elements into an array and calculate the total sum of all values.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> An isolated accumulator variable variable collects value metrics step-by-step from successive array slots.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int arr[5], i, sum = 0;
+clrscr();
+printf("Enter 5 integers:\n");
+for(i = 0; i &lt; 5; i++) {
+scanf("%d", &amp;arr[i]);
+}
+for(i = 0; i &lt; 5; i++) {
+sum += arr[i];
+}
+printf("\nTotal Sum of values = %d\n", sum);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter 5 integers:
+10 5 20 15 30
+
+Total Sum of values = 80</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q10</span>
+<h4>Write a program to enter 5 elements into an array, prompt for a search query value, and check if it is "found" or "not found".</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This linear search program sequentially scans the array indices, matching values against user parameters to flip validation flags.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int arr[5], i, key, found = 0;
+clrscr();
+printf("Enter 5 array values:\n");
+for(i = 0; i &lt; 5; i++) {
+scanf("%d", &amp;arr[i]);
+}
+printf("\nEnter the value to search: ");
+scanf("%d", &amp;key);
+for(i = 0; i &lt; 5; i++) {
+if(arr[i] == key) {
+found = 1;
+break;
+}
+}
+if(found)
+printf("Result: found\n");
+else
+printf("Result: not found\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter 5 array values:
+12 45 78 23 56
+
+Enter the value to search: 23
+Result: found</pre>
+</div>
+</div>
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q11</span>
+<h4>Write a program to enter exactly 5 elements into an array and sort them in ascending order.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> A nested Bubble Sort structure scans data blocks, executing temporary data swaps when adjacent left values exceed right parameters.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int arr[5], i, j, temp;
+clrscr();
+printf("Enter 5 values to sort:\n");
+for(i = 0; i &lt; 5; i++) {
+scanf("%d", &amp;arr[i]);
+}
+for(i = 0; i &lt; 5 - 1; i++) {
+for(j = 0; j &lt; 5 - 1 - i; j++) {
+if(arr[j] &gt; arr[j+1]) {
+temp = arr[j];
+arr[j] = arr[j+1];
+arr[j+1] = temp;
+}
+}
+}
+printf("\nSorted array in ascending order: ");
+for(i = 0; i &lt; 5; i++) {
+printf("%d ", arr[i]);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter 5 values to sort:
+89 12 45 2 67
+
+Sorted array in ascending order: 2 12 45 67 89 </pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q12</span>
+<h4>Write a program to scan an array and find its maximum value.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Initializing a reference parameter at index 0 allows sequential loop checks to capture and update the peak value whenever a larger array configuration appears.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int arr[10], i, n, max;
+clrscr();
+printf("Enter size of array (Max 10): ");
+scanf("%d", &amp;n);
+printf("Enter %d values:\n", n);
+for(i = 0; i &lt; n; i++) {
+scanf("%d", &amp;arr[i]);
+}
+max = arr[0];
+for(i = 1; i &lt; n; i++) {
+if(arr[i] &gt; max) {
+max = arr[i];
+}
+}
+printf("\nMaximum value in the array = %d\n", max);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter size of array (Max 10): 4
+Enter 4 values:
+15 67 2 44
+
+Maximum value in the array = 67</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="single-arrays" style="display: none;">
+<span class="badge">Arrays - Q13</span>
+<h4>Write a program to scan an array and find its minimum value.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> The program tracks tracking parameters continuously, replacing the core tracker whenever a lower index value is encountered during loop progression.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int arr[10], i, n, min;
+clrscr();
+printf("Enter size of array (Max 10): ");
+scanf("%d", &amp;n);
+printf("Enter %d values:\n", n);
+for(i = 0; i &lt; n; i++) {
+scanf("%d", &amp;arr[i]);
+}
+min = arr[0];
+for(i = 1; i &lt; n; i++) {
+if(arr[i] &lt; min) {
+min = arr[i];
+}
+}
+printf("\nMinimum value in the array = %d\n", min);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter size of array (Max 10): 4
+Enter 4 values:
+34 89 11 56
+
+Minimum value in the array = 11</pre>
+</div>
+</div>
+
+
+
+<div class="question-card" data-topic="multi-arrays">
+<span class="badge">Multi-Arrays - Q1</span>
+<h4>Write a program to enter four numbers from the user and arrange/print them in a 2x2 matrix format.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This solution reads 4 elements sequentially into a two-dimensional array using nested tracking coordinates for rows and columns.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int mat[2][2], i, j;
+clrscr();
+printf("Enter 4 elements for a 2x2 matrix:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+scanf("%d", &amp;mat[i][j]);
+}
+}
+printf("\nThe 2x2 Matrix is:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+printf("%d\t", mat[i][j]);
+}
+printf("\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter 4 elements for a 2x2 matrix:
+10 20 30 40
+
+The 2x2 Matrix is:
+10      20
+30      40</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="multi-arrays" style="display: none;">
+<span class="badge">Multi-Arrays - Q2</span>
+<h4>Write a program to enter a 2x2 matrix from the user and find/display its transpose.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Finding a transpose shifts the structural matrix orientation by mapping index row parameters directly onto column variables (<code>trans[j][i] = mat[i][j]</code>).
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int mat[2][2], trans[2][2], i, j;
+clrscr();
+printf("Enter elements for a 2x2 matrix:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+scanf("%d", &amp;mat[i][j]);
+}
+}
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+trans[j][i] = mat[i][j];
+}
+}
+printf("\nTranspose Matrix is:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+printf("%d\t", trans[i][j]);
+}
+printf("\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter elements for a 2x2 matrix:
+1 2 3 4
+
+Transpose Matrix is:
+1       3
+2       4</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="multi-arrays" style="display: none;">
+<span class="badge">Multi-Arrays - Q3</span>
+<h4>Write a program to enter two separate 2x2 matrices from the user and calculate their arithmetic sum.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> Matrix addition sums values residing at identical cell coordinate offsets across both base input layers.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int m1[2][2], m2[2][2], sum[2][2], i, j;
+clrscr();
+printf("Enter elements for Matrix 1:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+scanf("%d", &amp;m1[i][j]);
+}
+}
+printf("Enter elements for Matrix 2:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+scanf("%d", &amp;m2[i][j]);
+}
+}
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+sum[i][j] = m1[i][j] + m2[i][j];
+}
+}
+printf("\nSum Matrix Result:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+printf("%d\t", sum[i][j]);
+}
+printf("\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter elements for Matrix 1:
+1 2 3 4
+Enter elements for Matrix 2:
+5 6 7 8
+
+Sum Matrix Result:
+6       8
+10      12</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="multi-arrays" style="display: none;">
+<span class="badge">Multi-Arrays - Q4</span>
+<h4>Write a program to enter two separate 2x2 matrices from the user and calculate their subtraction.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> The program performs element-wise subtraction sequentially across nested layout rows using a single loop iteration pair.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int m1[2][2], m2[2][2], diff[2][2], i, j;
+clrscr();
+printf("Enter elements for Matrix 1:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+scanf("%d", &amp;m1[i][j]);
+}
+}
+printf("Enter elements for Matrix 2:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+scanf("%d", &amp;m2[i][j]);
+}
+}
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+diff[i][j] = m1[i][j] - m2[i][j];
+}
+}
+printf("\nDifference Matrix Result:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+printf("%d\t", diff[i][j]);
+}
+printf("\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter elements for Matrix 1:
+10 20 30 40
+Enter elements for Matrix 2:
+4 5 6 7
+
+Difference Matrix Result:
+6       15
+24      33</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="multi-arrays" style="display: none;">
+<span class="badge">Multi-Arrays - Q5</span>
+<h4>Write a program to enter two 2x2 matrices from the user and calculate their multiplication product.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> True matrix multiplication uses an extra inner loop index boundary variable (<code>k</code>) to calculate dot products of rows and columns.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main() 
+{
+int m1[2][2], m2[2][2], prod[2][2], i, j, k;
+clrscr();
+printf("Enter elements for Matrix 1:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+scanf("%d", &amp;m1[i][j]);
+}
+}
+printf("Enter elements for Matrix 2:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+scanf("%d", &amp;m2[i][j]);
+}
+}
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+prod[i][j] = 0;
+for(k = 0; k &lt; 2; k++) {
+prod[i][j] += m1[i][k] * m2[k][j];
+}
+}
+}
+printf("\nProduct Matrix Result:\n");
+for(i = 0; i &lt; 2; i++) {
+for(j = 0; j &lt; 2; j++) {
+printf("%d\t", prod[i][j]);
+}
+printf("\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>Enter elements for Matrix 1:
+1 2 3 4
+Enter elements for Matrix 2:
+2 0 1 2
+
+Product Matrix Result:
+4       4
+10      8</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings">
+<span class="badge">Strings - Q1</span>
+<h4>Enter a string from user and convert in uppercase?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100];
+int i=0;
+clrscr();
+printf("Enter a string: ");
+gets(str);
+while(str[i]!='\0')
+{
+if(str[i]>='a'&&str[i]<='z')
+{
+str[i]=str[i]-32;
+}
+i++;
+}
+printf("Uppercase String: %s\n",str);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = bca -> BCA</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q2</span>
+<h4>Enter a string from user and convert into lowercase?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100];
+int i=0;
+clrscr();
+printf("Enter a string: ");
+gets(str);
+while(str[i]!='\0')
+{
+if(str[i]>='A'&&str[i]<='Z')
+{
+str[i]=str[i]+32;
+}
+i++;
+}
+printf("Lowercase String: %s\n",str);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = PROGRAM -> program</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q3</span>
+<h4>Enter a string from user and convert into sentence case?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100];
+int i=1;
+clrscr();
+printf("Enter a string: ");
+gets(str);
+if(str[0]>='a'&&str[0]<='z')
+{
+str[0]=str[0]-32;
+}
+while(str[i]!='\0')
+{
+if(str[i]>='A'&&str[i]<='Z')
+{
+str[i]=str[i]+32;
+}
+i++;
+}
+printf("Sentence Case: %s\n",str);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = hello WORLD -> Hello world</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q4</span>
+<h4>Enter a string from user and convert into title case?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100];
+int i=0;
+clrscr();
+printf("Enter a string: ");
+gets(str);
+for(i=0;str[i]!='\0';i++)
+{
+if(i==0||str[i-1]==' ')
+{
+if(str[i]>='a'&&str[i]<='z')
+{
+str[i]=str[i]-32;
+}
+}
+else
+{
+if(str[i]>='A'&&str[i]<='Z')
+{
+str[i]=str[i]+32;
+}
+}
+}
+printf("Title Case: %s\n",str);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = c programming -> C Programming</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q5</span>
+<h4>Enter a string from user and convert into toggle case?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100];
+int i=0;
+clrscr();
+printf("Enter a string: ");
+gets(str);
+while(str[i]!='\0')
+{
+if(str[i]>='A'&&str[i]<='Z')
+{
+str[i]=str[i]+32;
+}
+else if(str[i]>='a'&&str[i]<='z')
+{
+str[i]=str[i]-32;
+}
+i++;
+}
+printf("Toggle Case: %s\n",str);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = CProgram -> cpROGRAM</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q6</span>
+<h4>Enter a string from user and find length of the string?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100];
+int len=0;
+clrscr();
+printf("Enter a string: ");
+gets(str);
+while(str[len]!='\0')
+{
+len++;
+}
+printf("Length of string: %d\n",len);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = Hello -> 5</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q7</span>
+<h4>Enter two strings from user and compare them?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str1[100],str2[100];
+int i=0,flag=0;
+clrscr();
+printf("Enter first string: ");
+gets(str1);
+printf("Enter second string: ");
+gets(str2);
+while(str1[i]!='\0'||str2[i]!='\0')
+{
+if(str1[i]!=str2[i])
+{
+flag=1;
+break;
+}
+i++;
+}
+if(flag==0)
+{
+printf("Strings are equal.\n");
+}
+else
+{
+printf("Strings are not equal.\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = apple, apple -> Equal</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q8</span>
+<h4>Enter two strings from user and concatenate them?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str1[100],str2[100];
+int i=0,j=0;
+clrscr();
+printf("Enter string 1: ");
+gets(str1);
+printf("Enter string 2: ");
+gets(str2);
+while(str1[i]!='\0')
+{
+i++;
+}
+while(str2[j]!='\0')
+{
+str1[i]=str2[j];
+i++;
+j++;
+}
+str1[i]='\0';
+printf("Concatenated: %s\n",str1);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = Hello, World -> HelloWorld</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q9</span>
+<h4>Enter a string from user and copy it into another string?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char src[100],dest[100];
+int i=0;
+clrscr();
+printf("Enter string: ");
+gets(src);
+while(src[i]!='\0')
+{
+dest[i]=src[i];
+i++;
+}
+dest[i]='\0';
+printf("Copied String: %s\n",dest);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = CopyMe -> CopyMe</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q10</span>
+<h4>Enter a string and index number, then print the corresponding character or out of bound?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100];
+int idx,len=0;
+clrscr();
+printf("Enter string: ");
+gets(str);
+printf("Enter index: ");
+scanf("%d",&idx);
+while(str[len]!='\0')
+{
+len++;
+}
+if(idx>=0&&idx<len)
+{
+printf("Character is: %c\n",str[idx]);
+}
+else
+{
+printf("Out of bound\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = India, Index 2 -> d</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q11</span>
+<h4>Enter a string from user and print each character on a new line?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100];
+int i=0;
+clrscr();
+printf("Enter string: ");
+gets(str);
+while(str[i]!='\0')
+{
+printf("%c\n",str[i]);
+i++;
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = C -> C</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q12</span>
+<h4>Enter a string from user and copy it in reverse order into another string?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char original[100],reverse[100];
+int len=0,i,j=0;
+clrscr();
+printf("Enter string: ");
+gets(original);
+while(original[len]!='\0')
+{
+len++;
+}
+for(i=len-1;i>=0;i--)
+{
+reverse[j]=original[i];
+j++;
+}
+reverse[j]='\0';
+printf("Reverse String: %s\n",reverse);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = gate -> etag</pre>
+</div>
+</div>
+
+<!-- STRINGS SECTION: QUESTIONS 13 TO 19 -->
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q13</span>
+<h4>Enter two strings from user and print difference of each character?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char s1[100],s2[100];
+int i=0;
+clrscr();
+printf("Enter string 1: ");
+gets(s1);
+printf("Enter string 2: ");
+gets(s2);
+while(s1[i]!='\0'&&s2[i]!='\0')
+{
+printf("Diff at index %d = %d\n",i,s1[i]-s2[i]);
+i++;
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = b, a -> Diff at index 0 = 1</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q14</span>
+<h4>Enter a string and a character, then check whether it exists or not?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100],search;
+int i=0,found=0;
+clrscr();
+printf("Enter string: ");
+gets(str);
+printf("Enter char to search: ");
+scanf(" %c",&search);
+while(str[i]!='\0')
+{
+if(str[i]==search)
+{
+found=1;
+break;
+}
+i++;
+}
+if(found==1)
+printf("Exists\n");
+else
+printf("Not Exists\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = web, e -> Exists</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q15</span>
+<h4>Enter a string and a character, then print its index number?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100],search;
+int i=0,pos=-1;
+clrscr();
+printf("Enter string: ");
+gets(str);
+printf("Enter character: ");
+scanf(" %c",&search);
+while(str[i]!='\0')
+{
+if(str[i]==search)
+{
+pos=i;
+break;
+}
+i++;
+}
+printf("Index is: %d\n",pos);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = exam, a -> Index is: 2</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q16</span>
+<h4>Enter a string from user and count all vowels?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100];
+int i=0,v=0;
+clrscr();
+printf("Enter string: ");
+gets(str);
+while(str[i]!='\0')
+{
+if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u')
+v++;
+i++;
+}
+printf("Total Vowels: %d\n",v);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = education -> Total Vowels: 5</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q17</span>
+<h4>Enter a string and an index number, then print the character at that index?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100];
+int bound;
+clrscr();
+printf("Enter string: ");
+gets(str);
+printf("Enter bound number: ");
+scanf("%d",&bound);
+printf("Character: %c\n",str[bound]);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = coding, Bound 3 -> i</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q18</span>
+<h4>Check whether a string is a palindrome using reverse?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+void main()
+{
+char str[100],rev[100];
+int len=0,i,j=0,pal=1;
+clrscr();
+printf("Enter string: ");
+gets(str);
+while(str[len]!='\0')
+len++;
+for(i=len-1;i>=0;i--)
+{
+rev[j]=str[i];
+j++;
+}
+rev[j]='\0';
+for(i=0;i&lt;len;i++)
+{
+if(str[i]!=rev[i])
+{
+pal=0;
+break;
+}
+}
+if(pal==1)
+printf("Palindrome\n");
+else
+printf("Not Palindrome\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = radar -> Palindrome</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="strings" style="display:none;">
+<span class="badge">Strings - Q19</span>
+<h4>Enter student data: roll number, name, class and marks of 5 subjects?</h4>
+<pre><code>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+struct Student
+{
+int roll;
+char name[50];
+char class[20];
+int marks[5];
+};
+void main()
+{
+struct Student s;
+int i;
+clrscr();
+printf("Enter Roll: ");
+scanf("%d",&s.roll);
+printf("Enter Name: ");
+fflush(stdin);
+gets(s.name);
+printf("Enter Class: ");
+gets(s.class);
+for(i=0;i&lt;5;i++)
+{
+printf("Marks for Subject %d: ",i+1);
+scanf("%d",&s.marks[i]);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = Data Stored inside Struct Structure</pre>
+</div>
+</div>
+<div class="question-card" data-topic="functions">
+<span class="badge">Functions - Q1</span>
+<h4>Write a program to perform Add, Subtract, Multiply, and Divide using functions.</h4>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void add(int a,int b)
+{
+printf("Sum = %d\\n",a+b);
+}
+void sub(int a,int b){
+printf("Sub = %d\\n",a-b);
+}
+void mul(int a,int b){printf("Mul = %d\\n",a*b);
+}
+void div(int a,int b)
+{
+printf("Div = %d\\n",a/b);
+}
+void main()
+{
+clrscr();
+add(10,5);
+sub(20,8);
+mul(4,5);
+div(15,3);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Sum = 15
+Sub = 12
+Mul = 20
+Div = 5
+</pre>
+</div></div>
+<div class="question-card" data-topic="functions" style="display: none;">
+<span class="badge">Functions - Q2</span>
+<h4>Write a program to enter 10 numbers and add them using a function.</h4>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void sumTen() {
+int i, num, sum = 0;
+for(i = 1; i <= 10; i++) {
+printf("Enter number %d: ", i);
+scanf("%d", &num);
+sum = sum + num;
+}
+printf("Total Sum = %d\n", sum);
+}
+void main() {
+clrscr();
+sumTen();
+getch();
+}</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Total Sum = 55</pre>
+</div>
+</div>
+<div class="question-card" data-topic="functions" style="display: none;">
+<span class="badge">Functions - Q3</span>
+<h4>Write a program to return an array from a function.</h4>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+int* getArray() {
+static int arr[] = {10, 20, 30};
+return arr;
+}
+void main() {
+int *p, i;
+clrscr();
+p = getArray();
+for(i = 0; i < 3; i++) {
+printf("%d ", *(p + i));
+}
+getch();
+}</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>10 20 30</pre>
+</div>
+</div>
+<div class="question-card" data-topic="functions" style="display: none;">
+<span class="badge">Functions - Q4</span>
+<h4>Write a program for Factorial and Reverse using Local and Global variables.</h4>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+int n = 5; 
+void fact() {
+int i, f = 1; 
+for(i = 1; i <= n; i++) f = f * i;
+rintf("Factorial = %d\n", f);
+}
+void main() {
+clrscr();
+fact();
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Factorial = 120</pre>
+</div>
+</div>
+<div class="question-card" data-topic="functions" style="display: none;">
+<span class="badge">Functions - Q5</span>
+<h4>Swap two numbers using Call by Address.</h4>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void swap(int *x, int *y) {
+int temp = *x;
+*x = *y
+*y = temp;
+}
+void main() {
+int a = 10, b = 20;
+clrscr();
+swap(&a, &b);
+printf("a = %d, b = %d\n", a, b);
+getch();
+}</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>a = 20, b = 10</pre>
+</div>
+</div>
+<div class="question-card" data-topic="functions" style="display: none;">
+<span class="badge">Functions - Q6</span>
+<h4>Swap two numbers using Call by Value.</h4>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void swap(int x, int y) {
+int temp = x;
+x = y;
+y = temp;
+}
+void main() {
+int a = 10, b = 20;
+clrscr();
+swap(a, b);
+printf("a = %d, b = %d\n", a, b);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>a = 10, b = 20</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="functions" style="display: none;">
+<span class="badge">Functions - Q7</span>
+<h4>Write a function to find out Power of a number.</h4>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void findPower(int base, int exp) {
+int res = 1;
+while(exp > 0) {
+res = res * base;
+exp--;
+}
+printf("Result = %d\n", res);
+}
+void main() {
+clrscr();
+findPower(2, 3);
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Result = 8</pre>
+</div>
+</div>
+<div class="question-card" data-topic="functions" style="display: none;">
+<span class="badge">Functions - Q8</span>
+<h4>Write a function to find out Cube of a number.</h4>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void cube(int n) {
+printf("Cube = %d\n", n * n * n);
+}
+void main() {
+clrscr();
+cube(4);
+getch();
+}</code></pre>
+<div class="output-box">
+<strong>Output:</strong>
+<pre>Cube = 64</pre>
+</div>
+</div>
+
+
+<div class="question-card" data-topic="structures">
+<span class="badge">Structures - Q1</span>
+<h4>Write a program to create a structure for employees containing Employee ID, Name, and Designation. Read data for 50 employees from the user and print the details in a clean tabular format.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> An array of structures groups related record fields into structured structural database blocks, utilizing formatted escape configurations (<code>\t</code>) to print neat row layouts.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+struct Employee {
+int empID;
+char name[30];
+char designation[30];
+};
+void main() 
+{
+struct Employee emp[50];
+int i;
+clrscr();
+printf("--- Enter Details for 50 Employees ---\n");
+for(i = 0; i &lt; 50; i++) {
+printf("\nEmployee %d:\n", i + 1);
+printf("Enter ID: ");
+scanf("%d", &amp;emp[i].empID);
+printf("Enter Name: ");
+fflush(stdin);
+gets(emp[i].name);
+printf("Enter Designation: ");
+gets(emp[i].designation);
+}
+clrscr();
+printf("--------------------------------------------------\n");
+printf("ID\tName\t\tDesignation\n");
+printf("--------------------------------------------------\n");
+for(i = 0; i &lt; 50; i++) {
+printf("%d\t%s\t\t%s\n", emp[i].empID, emp[i].name, emp[i].designation);
+}
+printf("--------------------------------------------------\n");
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>--------------------------------------------------
+ID      Name            Designation
+--------------------------------------------------
+101     Kashish         Developer
+102     Aman            Designer
+...
+--------------------------------------------------</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="structures" style="display: none;">
+<span class="badge">Structures - Q2</span>
+<h4>Write a program to create a structure for employees containing Employee ID, Name, and Designation. Read records for 50 employees and print only the names of the employees.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This solution iterates through the structure records sequentially, targeting and streaming only the string field data layer back to the output screen.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+struct Employee {
+int empID;
+char name[30];
+char designation[30];
+};
+void main() 
+{
+struct Employee emp[50];
+int i;
+clrscr();
+printf("--- Enter Details for 50 Employees ---\n");
+for(i = 0; i &lt; 50; i++) {
+printf("Employee %d Name: ", i + 1);
+fflush(stdin);
+gets(emp[i].name);
+emp[i].empID = i + 1; 
+}
+clrscr();
+printf("--- Employee Names List ---\n");
+for(i = 0; i &lt; 50; i++) {
+printf("%d. %s\n", i + 1, emp[i].name);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>--- Employee Names List ---
+1. Kashish Rajput
+2. Rohan Sharma
+...</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="structures" style="display: none;">
+<span class="badge">Structures - Q3</span>
+<h4>Write a program to create a structure for employees containing Employee ID, Name, and Designation. Read records for 50 employees and print each employee name character with its corresponding Employee ID in a tabular form.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> A nested structure loop configuration parses the string name arrays character-by-character while matching them side-by-side with their parent identification metadata parameters.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+struct Employee {
+int empID;
+char name[30];
+char designation[30];
+};
+void main() 
+{
+struct Employee emp[50];
+int i, j;
+clrscr();
+for(i = 0; i &lt; 50; i++) {
+printf("Enter ID for Emp %d: ", i + 1);
+scanf("%d", &amp;emp[i].empID);
+printf("Enter Name for Emp %d: ", i + 1);
+fflush(stdin);
+gets(emp[i].name);
+}
+clrscr();
+printf("ID\tChar\n");
+printf("-------------\n");
+for(i = 0; i &lt; 50; i++) {
+for(j = 0; emp[i].name[j] != '\0'; j++) {
+if(emp[i].name[j] != ' ') {
+printf("%d\t%c\n", emp[i].empID, emp[i].name[j]);
+}
+}
+printf("-------------\n");
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>ID      Char
+-------------
+101     R
+101     a
+101     j
+-------------
+102     A
+...</pre>
+</div>
+</div>
+
+<div class="question-card" data-topic="structures" style="display: none;">
+<span class="badge">Structures - Q4</span>
+<h4>Write a program to enter student details including Roll Number, Name, Fee, and Date of Birth (nested structure), and display all details sorted in ascending order of their Roll Numbers.</h4>
+<div class="answer-text">
+<strong>Answer:</strong> This solution applies a nested structure configuration to hold date elements, executing a record-level structure swap sort whenever roll number indices cross relational validation checks.
+</div>
+<pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+struct Date {
+int day;
+int month;
+int year;
+};
+struct Student {
+int rollNo;
+char name[30];
+float fee;
+struct Date dob;
+};
+void main() 
+{
+struct Student s[5], temp;
+int i, j, n = 5; 
+clrscr();
+printf("--- Enter Details for %d Students ---\n", n);
+for(i = 0; i &lt; n; i++) {
+printf("\nStudent %d:\n", i + 1);
+printf("Enter Roll Number: ");
+scanf("%d", &amp;s[i].rollNo);
+printf("Enter Name: ");
+fflush(stdin);
+gets(s[i].name);
+printf("Enter Fee: ");
+scanf("%f", &amp;s[i].fee);
+printf("Enter DOB (DD MM YYYY): ");
+scanf("%d%d%d", &amp;s[i].dob.day, &amp;s[i].dob.month, &amp;s[i].dob.year);
+}
+for(i = 0; i &lt; n - 1; i++) {
+for(j = 0; j &lt; n - 1 - i; j++) {
+if(s[j].rollNo &gt; s[j+1].rollNo) {
+temp = s[j];
+s[j] = s[j+1];
+s[j+1] = temp;
+}
+}
+}
+clrscr();
+printf("\n================ Sorted Student Records ================\n");
+printf("Roll\tName\t\tFee\t\tDOB\n");
+printf("========================================================\n");
+for(i = 0; i &lt; n; i++) {
+printf("%d\t%s\t\t%.2f\t\t%02d-%02d-%d\n", 
+s[i].rollNo, s[i].name, s[i].fee, s[i].dob.day, s[i].dob.month, s[i].dob.year);
+}
+getch();
+}
+</code></pre>
+<div class="output-box">
+<strong>Expected Output:</strong>
+<pre>================ Sorted Student Records ================
+Roll    Name            Fee             DOB
+========================================================
+3       Amit            4500.00         12-05-2007
+7       Kashish         5200.00         24-09-2006
+12      Rohit           4800.00         15-12-2006</pre>
+</div>
+</div>
+
+</main>
+</div>
+<script>
+function filterTopic(topicId, btn) {
+document.querySelectorAll('.topic-btn').forEach(b => b.classList.remove('active'))
+btn.classList.add('active');
+document.querySelectorAll('.question-card').forEach(card => {
+if (topicId === 'all' || card.getAttribute('data-topic') === topicId) {
+card.style.display = 'block';
+} else {
+card.style.display = 'none';
+}
+});
+}
+</script>
+</body>
+</html>
